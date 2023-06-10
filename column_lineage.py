@@ -29,7 +29,7 @@ class ColumnLineage:
         self.part_tables = part_tables
         self.column_prefix_dict = {}
         self.faldbt = faldbt
-        self.sql_ast = parse_one(sql=sql, read="postgres")
+        self.sql_ast = parse_one(sql=sql, read="trino")
         self.cte_column = self._find_cte_col(sql)
         self.final_output = ""
         self.final_node_type = ""
